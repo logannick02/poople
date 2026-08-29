@@ -1,0 +1,44 @@
+.keyboard {
+    width: min(90vw, 450px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: 0.45rem;
+}
+
+.key {
+    min-width: 0;
+    height: 58px;
+    grid-column: span 2;
+
+    background: #818384;
+    color: #E0E0E0;
+
+    border: none;
+    border-radius: 2px;
+    
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1.5rem;
+    
+    transition: background-color 0.1s ease-in-out;
+}
+
+.key:hover {
+    background-color: #6c6e70;
+}
+
+
+.key.backspace, .key.enter {
+    font-size: 1.1rem;
+    grid-column: span 3;
+}
+
+.row:nth-child(2) .key:first-child {
+    grid-column: 2 / span 2;
+}

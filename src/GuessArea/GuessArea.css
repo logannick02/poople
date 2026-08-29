@@ -1,0 +1,81 @@
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.board-container {
+    width: min(90vw, 400px);
+    margin: 20px;
+}
+
+.board {
+    width: 100%;
+    height: 40vh;
+
+    overflow-y: auto;
+    user-select: none;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 80px)); /* 4 letters */
+    gap: 0.5rem; /* gap between tiles */
+    padding: 0.5px;
+
+    align-content: start;
+    justify-content: center;
+
+    /* this removes scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.board.at-top {
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        #303030 85%,
+        transparent 100%
+    );
+}
+
+.board.in-middle {
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #303030 15%,
+        #303030 85%,
+        transparent 100%
+    );
+}
+
+.board.at-bottom {
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        #303030 15%
+    );
+}
+
+.board::-webkit-scrollbar {
+    display: none;
+}
+
+.tile {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    border: 2px solid #929292;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.present {
+    background: #7A5901; 
+}
