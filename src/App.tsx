@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
   const [results, setResults] = useState([] as string[]); // final board values
-  const [startWord, setStartWord] = useState("POMP");
+  const [startWord, setStartWord] = useState("FAST");
   const [dayCount, setDayCount] = useState(1);
   const [copyText, setCopyText] = useState("");
 

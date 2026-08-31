@@ -79,3 +79,8 @@
 .present {
     background: #7A5901; 
 }
+
+.popup {
+    height: 1.5rem;
+    color: #888888
+}
