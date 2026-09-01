@@ -10,7 +10,6 @@ function App() {
   const [dayCount] = useState(1);
   const [copyText, setCopyText] = useState("");
 
-  // vercel push test
   const handleResults = (returnValue: string[]) => {
     setResults(returnValue);
 
@@ -41,6 +40,9 @@ function App() {
 
       tmp += "\n";
     }
+
+    tmp += "Play at https://lcaraway-poople.vercel.app/"
+    tmp += '\n';
 
     setCopyText(tmp);
   }
