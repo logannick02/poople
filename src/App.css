@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   margin: 0 auto;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -29,6 +30,7 @@ main {
   display: flex;
   justify-content: center;
   flex: 1;
+  min-height: 0;
 }
 
 hr {
