@@ -7,6 +7,7 @@ import './App.css'
 function App() {
   const [results, setResults] = useState([] as string[]); // final board values
   const [startWord] = useState("FAST");
+  const [best] = useState("5");
   const [dayCount] = useState(1);
   const [copyText, setCopyText] = useState("");
 
@@ -14,7 +15,7 @@ function App() {
     setResults(returnValue);
 
     // set the results copy text
-    let tmp = `Poople #${dayCount}`;
+    let tmp = `Poople #${dayCount} ${returnValue.length}/${best}`;
     tmp += "\n";
 
     for (let i = 0; i < startWord.length; i++) {
