@@ -40,6 +40,3 @@ idx = random.randint(0, len(options)-1)
 path = bfs(options[idx], "POOP", options)
 
 print(f"Shortest path for {options[idx]} is {len(path)}")
-print(path)
-
-
