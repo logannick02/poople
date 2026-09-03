@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { GuessArea } from './GuessArea/GuessArea'
 import { checkLetter } from './utils/Utils';
+import dailyWord from "./data/dailyWord.json";
 
 import './App.css'
 
 function App() {
   const [results, setResults] = useState([] as string[]); // final board values
-  const [startWord] = useState("SIRE");
-  const [best] = useState("7");
+  const [startWord] = useState(dailyWord.word);
+  const [best] = useState(dailyWord.bestPathLength);
   const [dayCount] = useState(1);
   const [copyText, setCopyText] = useState("");
 

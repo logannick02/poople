@@ -39,4 +39,7 @@ idx = random.randint(0, len(options)-1)
 
 path = bfs(options[idx], "POOP", options)
 
-print(f"Shortest path for {options[idx]} is {len(path)}")
+wordData = {"word": options[idx], "bestPathLength": len(path)}
+
+with open("./src/data/dailyWord.json", "w") as file:
+    json.dump(wordData, file)
