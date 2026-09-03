@@ -14,7 +14,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 0.15rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 header h1 {
@@ -26,21 +26,30 @@ header span {
   color: #888888;
 }
 
+.instructions {
+  text-align: center;
+  max-width: 400px;
+  color: #888888;
+  font-size: 0.9rem;
+}
+
 main {
   display: flex;
   justify-content: center;
   flex: 1;
   min-height: 0;
+  width: 100%;
 }
 
 hr {
   width: 100vw;
   border: 0;
   border-top: 1px solid #929292;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 footer {
+  flex-shrink: 0;
   margin: 1rem;
   color: #888888;
 }

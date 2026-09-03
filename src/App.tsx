@@ -64,6 +64,9 @@ function App() {
     <div className="app-area">      
       <header>
         <h1><span style={{color: "#7A5901"}}>Poop</span>le</h1>
+        <p className="instructions">
+        Get to "POOP" by changing one letter at a time.
+        </p>
         <span>#{dayCount}: {startWord}</span>
       </header>
       
@@ -76,6 +79,7 @@ function App() {
       <footer>
           <ul>
             <li onClick={handleCopy}>Copy results</li>
+            <li></li>
           </ul>
       </footer>
     </div>

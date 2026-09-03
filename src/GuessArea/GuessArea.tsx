@@ -219,6 +219,7 @@ export const GuessArea = ({onUserWin, startWord}: {onUserWin: (results: string[]
     return (
         <div className="game-area">
             <p className="popup">{popupMsg}</p>
+            
             {/*TODO - move this to its own component */}
             <div className="board-container">
                 <div ref ={boardRef} className={`board ${(!atTop && !atBottom) ? "in-middle" : atBottom ? "at-bottom" : "at-top"}`}>
