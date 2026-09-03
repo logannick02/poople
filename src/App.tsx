@@ -1,16 +1,15 @@
 import { useState } from 'react'
 import { GuessArea } from './GuessArea/GuessArea'
 import { checkLetter } from './utils/Utils';
-import { Analytics } from "@vercel/analytics/next"
 import dailyWord from "./data/dailyWord.json";
 
 import './App.css'
 
 function App() {
   const [results, setResults] = useState([] as string[]); // final board values
-  const [startWord] = useState(dailyWord.word);
-  const [best] = useState(dailyWord.bestPathLength);
-  const [dayCount] = useState(1);
+  const startWord = dailyWord.word;
+  const best = dailyWord.bestPathLength;
+  const dayCount = 3;
   const [copyText, setCopyText] = useState("");
 
   const handleResults = (returnValue: string[]) => {
@@ -62,9 +61,7 @@ function App() {
   };
 
   return (
-    <div className="app-area">
-      <Analytics />
-      
+    <div className="app-area">      
       <header>
         <h1><span style={{color: "#7A5901"}}>Poop</span>le</h1>
         <span>#{dayCount}: {startWord}</span>
