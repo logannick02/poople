@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { GuessArea } from './GuessArea/GuessArea'
 import { checkLetter } from './utils/Utils';
+import { Analytics } from "@vercel/analytics/next"
 import dailyWord from "./data/dailyWord.json";
 
 import './App.css'
@@ -62,6 +63,8 @@ function App() {
 
   return (
     <div className="app-area">
+      <Analytics />
+      
       <header>
         <h1><span style={{color: "#7A5901"}}>Poop</span>le</h1>
         <span>#{dayCount}: {startWord}</span>
