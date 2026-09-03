@@ -1,5 +1,6 @@
 import json, random
 from collections import deque
+from datetime import date
 
 def one_away(w1, w2):
     diff = 0
@@ -36,10 +37,16 @@ with open("./src/data/starter.json", "r") as file:
     options = json.load(file)
 
 idx = random.randint(0, len(options)-1)
-
 path = bfs(options[idx], "POOP", options)
 
-wordData = {"word": options[idx], "bestPathLength": len(path)}
+
+start_date = date(2026, 9, 1)
+
+cur_date = date.today()
+
+delta = cur_date - start_date
+
+wordData = {"day": delta.days, "word": options[idx], "bestPathLength": len(path)}
 
 with open("./src/data/dailyWord.json", "w") as file:
     json.dump(wordData, file)

@@ -9,7 +9,7 @@ function App() {
   const [results, setResults] = useState([] as string[]); // final board values
   const startWord = dailyWord.word;
   const best = dailyWord.bestPathLength;
-  const dayCount = 3;
+  const dayCount = dailyWord.day;
   const [copyText, setCopyText] = useState("");
 
   const handleResults = (returnValue: string[]) => {

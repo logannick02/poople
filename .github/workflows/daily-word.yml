@@ -22,7 +22,7 @@ jobs:
           python-version: "3.13"
 
       - name: Run script
-        run: python scripts/generate_daily_word.py
+        run: python scripts/choose-word.py
 
       - name: Commit changes
         run: |
