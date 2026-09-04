@@ -2,7 +2,7 @@ name: Generate Poople Word
 
 on:
   schedule:
-    - cron: "35 7 * * *"
+    - cron: "34 15 * * *"
   workflow_dispatch:
 
 permissions:
