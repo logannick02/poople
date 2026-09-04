@@ -30,23 +30,29 @@ def bfs(start, end, wordSet):
                 visited.add(word)
                 q.append(path + [word])
     
-    return paths
+    return None
 
 
 with open("./src/data/starter.json", "r") as file:
-    options = json.load(file)
+    startOptions = json.load(file)
 
-idx = random.randint(0, len(options)-1)
-path = bfs(options[idx], "POOP", options)
+with open("./src/data/answers.json", "r") as file:
+    answerOptions = json.load(file)
 
+startWord = startOptions[random.randint(0, len(startOptions)-1)]
+path = bfs(startWord, "POOP", answerOptions)
 
-start_date = date(2026, 9, 1)
+# for determining the day count
+start_date = date(2026, 8, 31)
 
 cur_date = date.today()
 
 delta = cur_date - start_date
 
-wordData = {"day": delta.days, "word": options[idx], "bestPathLength": len(path)}
+wordData = {"day": delta.days, "word": startWord, "bestPathLength": len(path)-1}
+
+print(wordData)
+print(path)
 
 with open("./src/data/dailyWord.json", "w") as file:
     json.dump(wordData, file)
