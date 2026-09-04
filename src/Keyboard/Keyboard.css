@@ -1,5 +1,5 @@
 .keyboard {
-    width: min(98vw, 450px);
+    width: min(90vw, 450px);
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
@@ -33,10 +33,15 @@
     padding: 0;
 }
 
-.key:hover {
-    background-color: #6c6e70;
+@media (hover: hover) {
+    .key:hover {
+        background-color: #6c6e70;
+    }
 }
 
+.key:active {
+    background-color: #6c6e70;
+}
 
 .key.backspace, .key.enter {
     font-size: 1.1rem;
